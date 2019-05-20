@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crawli</title>
+  </head>
+  <body>
+    <h1>Crawli</h1>
+    <pre id="app"></pre>
+    <script>
+      ;(async function boot() {
+        const res = await fetch(`/api${location.pathname}`)
+
+        const data = await res.json()
+
+        document.getElementById('app').innerText = JSON.stringify(data, null, 2)
+      })()
+    </script>
+
+    <style>
+      pre {
+        max-width: 500px;
+        margin: 0 auto;
+        background: #ddd;
+        padding: 2em;
+      }
+    </style>
+  </body>
+</html>

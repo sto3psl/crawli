@@ -1,0 +1,29 @@
+{
+  "name": "crawli",
+  "version": "1.0.0",
+  "description": "Serverless Link Preview API build on now.sh",
+  "main": "index.js",
+  "scripts": {
+    "dev": "now dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sto3psl/crawli.git"
+  },
+  "keywords": [
+    "opengraph",
+    "crawler",
+    "oembed",
+    "now"
+  ],
+  "author": "Fabian Guendel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sto3psl/crawli/issues"
+  },
+  "homepage": "https://github.com/sto3psl/crawli#readme",
+  "devDependencies": {
+    "now": "^15.2.0"
+  }
+}
