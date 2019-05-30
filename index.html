@@ -8,23 +8,16 @@
   </head>
   <body>
     <h1>Crawli</h1>
-    <pre id="app"></pre>
-    <script>
-      ;(async function boot() {
-        const res = await fetch(`/api${location.pathname}`)
-
-        const data = await res.json()
-
-        document.getElementById('app').innerText = JSON.stringify(data, null, 2)
-      })()
-    </script>
+    <div id="app"></div>
+    <script src="main.js"></script>
 
     <style>
-      pre {
-        max-width: 500px;
-        margin: 0 auto;
-        background: #ddd;
-        padding: 2em;
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+          Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
     </style>
   </body>

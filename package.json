@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "now dev",
+    "now-build": "parcel build index.html",
+    "now-dev": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +26,14 @@
   },
   "homepage": "https://github.com/sto3psl/crawli#readme",
   "devDependencies": {
-    "now": "^15.2.0"
-  }
+    "@babel/core": "~7.4.5",
+    "now": "15.3.0",
+    "parcel-bundler": "~1.12.3"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.3",
+    "got": "9.6.0",
+    "preact": "10.0.0-beta.1"
+  },
+  "browserslist": ">1%, not IE 11"
 }
