@@ -53,3 +53,6 @@ New features, bug fixes, etc. will be discussed in [Github issues](https://githu
 
 Every issue or feature that's being worked on should become a pull request and 1 approving review is necessary to merge to `master`. Additionally status checks from `now` have to pass before merging. In the future we might add some linting, formatting and test scripts but that is not necessary at the moment.
 
+Pull requests will usually get squash merged which means individual commit messages will get lost. If they are important and well formatted, we rebase merge.
+
+> [Article - Always Squash and Rebase your Git Commits](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/) 
