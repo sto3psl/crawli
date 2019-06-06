@@ -6,6 +6,17 @@ This is a learning project to get a better understanding of some Node internals 
 
 I hope this will be a lot of fun and everyone can learn something new 🙂.
 
+## Topics
+
+These are the topics we will touch during the project. In no particular order:
+
+* Learn how to use basic Node.js APIs
+* Refactoring code
+* Writing tests for more reliable code
+* Javascript tooling
+* Writing asynchronous code
+* A little bit of frontend development with [Preact](https://preactjs.com)
+
 ## Development
 
 To start developing on this project, clone this repository and install it's dependencies.
