@@ -3,6 +3,8 @@ import { useState } from 'preact/hooks'
 
 const root = document.getElementById('app')
 
+const DOMAIN = process.env.NODE_ENV === 'development' ? `http://localhost:${process.env.PORT}/api` : '/api'
+
 function App({ search }) {
   const url = search.get('c')
   const [status, setStatus] = useState({ type: 'idle' })
@@ -14,7 +16,10 @@ function App({ search }) {
     const data = new FormData(e.target)
 
     try {
-      const response = await (await fetch(`/api/${data.get('url')}`)).json()
+      const url = data.get('url')
+      const response = await (await fetch(`${DOMAIN}/${url}`, {
+        mode: 'cors'
+      })).json()
       setStatus({ type: 'success' })
       setPreview(response)
     } catch (error) {

@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
 
   const $ = cheerio.load(body)
 
+  res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('content-type', 'application/json')
   res.setHeader('cache-control', 'max-age=60, s-maxage=3600') // 3600s = 1h
   res.end(
