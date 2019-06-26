@@ -4,9 +4,10 @@
   "description": "Serverless Link Preview API build on now.sh",
   "main": "index.js",
   "scripts": {
-    "dev": "now dev",
+    "dev": "concurrently 'yarn app' 'yarn api'",
+    "app": "parcel index.html",
+    "api": "micro-dev api/index.js",
     "now-build": "parcel build index.html",
-    "now-dev": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,8 +27,12 @@
   },
   "homepage": "https://github.com/sto3psl/crawli#readme",
   "devDependencies": {
-    "@babel/core": "~7.4.5",
-    "now": "15.4.0",
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
+    "concurrently": "^4.1.0",
+    "micro": "9.3.4",
+    "micro-dev": "^3.0.0",
     "parcel-bundler": "~1.12.3"
   },
   "dependencies": {

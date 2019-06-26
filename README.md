@@ -26,26 +26,43 @@ To start developing on this project, clone this repository and install it's depe
 
 > cd crawli
 
-> npm install
+> yarn install
 ```
 
 To get the project up and running you can start the development server with the following command:
 
 ```sh
-> npm run dev
+> yarn dev
 
-# The output will look something like this.
-> Now CLI 15.3.0 dev (beta) — https://zeit.co/feedback/dev
-> Setting up 1 Builder
-> Success! Builder setup complete
-> Ready! Available at http://localhost:3000
-✨  Built in 526ms.
-...
+yarn run v1.17.0
+$ concurrently 'yarn app' 'yarn api'
+$ parcel index.html
+$ micro-dev api/index.js
+[1]
+[1]    ┌────────────────────────────────────────────────────┐
+[1]    │                                                    │
+[1]    │   Micro is running!                                │
+[1]    │                                                    │
+[1]    │   • Local:            http://localhost:3000        │
+[1]    │   • On Your Network:  http://192.168.125.23:3000   │
+[1]    │                                                    │
+[1]    │                                                    │
+[1]    │                                                    │
+[1]    └────────────────────────────────────────────────────┘
+[1]
+[0] Server running at http://localhost:1234
+[0]
+[1] File changed: dist/index.html - Restarting server...
+[1] Restarted!
+[0] ✨  Built in 906ms.
+[1]
+[1] File changed: dist/index.js - Restarting server...
+[1] Restarted!
 ```
 
-This will start `now dev`, which emulates the behaviour of the deployed lambda functions. If you want to learn more follow this link to the [developer documentation of now.sh](https://zeit.co/docs). This is not necessary but might be useful if something goes wrong and deployments are taken care of with [Zeits Github integration](https://zeit.co/docs/v2/integrations/now-for-github/).
+This will start a small api server and a frontend server with Parcel, which emulates the behaviour of the deployed lambda functions. If you want to learn more follow this link to the [developer documentation of now.sh](https://zeit.co/docs). This is not necessary but might be useful if something goes wrong and deployments are taken care of with [Zeits Github integration](https://zeit.co/docs/v2/integrations/now-for-github/).
 
-Changing files in the projects root or in `api/` will trigger a rebuild and start the webserver with the new changes. During development the webserver will run on `localhost:3000`. Make sure to have the dev tools of your browser open and disable cache, otherwise your changes won't be visible since `now dev` caches content like the live platform would do.
+Changing files in the projects root or in `api/` will trigger a rebuild and start the webserver with the new changes. During development the webserver will run on `localhost:1234`. The api runs on `localhost:3000`
 
 ## Project structure
 
