@@ -3,7 +3,8 @@ import { useState } from 'preact/hooks'
 
 const root = document.getElementById('app')
 
-const DOMAIN = process.env.NODE_ENV === 'development' ? `http://localhost:${process.env.PORT}/api` : '/api'
+const DOMAIN =
+  process.env.NODE_ENV === 'development' ? `http://localhost:${process.env.PORT}/api` : '/api'
 
 function App({ search }) {
   const url = search.get('c')
@@ -37,7 +38,9 @@ function App({ search }) {
       {status.type === 'success' && (
         <div>
           <h2>{preview.title}</h2>
-          <img src={preview.image} />
+          <p>{preview.description}</p>
+          <img src={preview['og:image']} />
+          <pre>{JSON.stringify(preview, null, 2)}</pre>
         </div>
       )}
     </div>
