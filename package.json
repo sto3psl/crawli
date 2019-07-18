@@ -27,18 +27,18 @@
   },
   "homepage": "https://github.com/sto3psl/crawli#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-env": "^7.4.5",
-    "concurrently": "^4.1.0",
+    "@babel/core": "~7.5.5",
+    "@babel/plugin-transform-react-jsx": "~7.3.0",
+    "@babel/preset-env": "~7.4.5",
+    "concurrently": "~4.1.0",
     "micro": "9.3.4",
-    "micro-dev": "^3.0.0",
+    "micro-dev": "~3.0.0",
     "parcel-bundler": "~1.12.3"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.3",
     "got": "9.6.0",
-    "preact": "10.0.0-beta.1"
+    "preact": "10.0.0-rc.1"
   },
   "browserslist": ">1%, not IE 11"
 }
